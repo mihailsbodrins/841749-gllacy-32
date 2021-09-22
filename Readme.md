@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Mihails Bodrins](https://up.htmlacademy.ru/htmlcss/32/user/841749).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
