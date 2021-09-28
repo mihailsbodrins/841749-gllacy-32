@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Глейси</title>
   </head>
 
@@ -20,7 +21,9 @@
             <a class="navigation-link" href="about.html">О компании</a>
           </li>
         </ul>
-        <b>+7 800 555-86-28</b>
+        <a href="tel:+78005558628">
+          <b>+7 800 555-86-28</b>
+        </a>
         <ul class="navigation-list">
           <li class="navigation-link">
             <a href="#">
@@ -61,32 +64,32 @@
       <section class="offer">
         <h2 class="offer-headline">Попробуйте самые популярные вкусы нашего мороженого</h2>
         <ul class="offer-list">
-          <li class="offer-item product-card-item">
+          <li class="product-card-item">
             <img src="#" alt="Фотография мороженного">
-            <h3 class="offer-title product-card-title">Малинка</h3>
-            <p class="offer-description product-card-description">Сливочное мороженое с малиновым джемом</p>
-            <b class="offer-price product-card-price">310 ₽/кг</b>
+            <h3 class="product-card-title">Малинка</h3>
+            <p class="product-card-description">Сливочное мороженое с малиновым джемом</p>
+            <b class="product-card-price">310 ₽/кг</b>
             <a href="#" class="visually-hidden product-card-button button">Купить</a>
           </li>
-          <li class="offer-item product-card-item">
+          <li class="product-card-item">
             <img src="#" alt="Фотография мороженного">
-            <h3 class="offer-title product-card-title">Фисташка</h3>
-            <p class="offer-description product-card-description">Фисташковый пломбир с кусочками шоколада</p>
-            <b class="offer-price product-card-price">340 ₽/кг</b>
+            <h3 class="product-card-title">Фисташка</h3>
+            <p class="product-card-description">Фисташковый пломбир с кусочками шоколада</p>
+            <b class="product-card-price">340 ₽/кг</b>
             <a href="#" class="visually-hidden product-card-button button">Купить</a>
           </li>
-          <li class="offer-item product-card-item">
+          <li class="product-card-item">
             <img src="#" alt="Фотография мороженного">
-            <h3 class="offer-title product-card-title">Черника</h3>
-            <p class="offer-description product-card-description">Крем-брюле с черничным джемом</p>
-            <b class="offer-price product-card-price">330 ₽/кг</b>
+            <h3 class="product-card-title">Черника</h3>
+            <p class="product-card-description">Крем-брюле с черничным джемом</p>
+            <b class="product-card-price">330 ₽/кг</b>
             <a href="#" class="visually-hidden product-card-button button">Купить</a>
           </li>
-          <li class="offer-item product-card-item">
+          <li class="product-card-item">
             <img src="#" alt="Фотография мороженного">
-            <h3 class="offer-title product-card-title">Бабл-гам</h3>
-            <p class="offer-description product-card-description">Ванильный пломбир со сладкой посыпкой</p>
-            <b class="offer-price product-card-price">320 ₽/кг</b>
+            <h3 class="product-card-title">Бабл-гам</h3>
+            <p class="product-card-description">Ванильный пломбир со сладкой посыпкой</p>
+            <b class="product-card-price">320 ₽/кг</b>
             <a href="#" class="visually-hidden product-card-button button">Купить</a>
           </li>
         </ul>
@@ -109,7 +112,7 @@
           </li>
         </ul>
       </section>
-      <div>
+      <div class="wrapper">
         <article class="blog">
           <h2 class="visually-hidden">Блог</h2>
           <p>Новое в нашем блоге</p>
@@ -128,7 +131,44 @@
           </form>
         </section>
       </div>
+      <section class="shipping">
+        <h2 class="shipping-headline">Доставка любимого мороженого на дом</h2>
+        <p class="shipping-description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом и курьер привезет вам ваш заказ в течение часа!</p>
+        <form class="shipping-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="shipping-form-date">
+            <span class="form-label form-label-icon">
+              <label for="shipping-date">
+                Дата</label>
+            </span>
+            <input type="text" id="shipping-date" name="shipping-date" placeholder="01.04.2020">
+          </p>
+          <p class="shipping-form-phone">
+            <label for="shipping-phone">
+              Телефон
+            </label>
+            <input type="text" id="shipping-phone" name="shipping-phone" placeholder="+7 800 999-00-00">
+          </p>
+          <p class="shipping-form-adress">
+            <label for="shipping-adress">
+              Адрес
+            </label>
+            <input type="text" id="shipping-adress" name="shipping-adress" placeholder="ул. Большая Конюшенная, 19/8">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts-headline">Адрес главного офиса и офлайн-магазина:</h2>
+        <address class="contacts-adress"> <!-- хочется сделать элемент списка описания -->
+          <p class="contacts-adress-text">наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+          <p class="contacts-phone-description">Для заказов по телефону:</p>
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <p class="contacts-time">(с 10 до 20 ежедневно)</p>
+          <a class="button button-feedback" href="#">Форма обратной связи</a>
+        </address>
+      </section>
     </main>
 
   </body>
 </html>
+
