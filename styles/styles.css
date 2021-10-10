@@ -1,0 +1,54 @@
+/* Font Face */
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("fonts/inter-400.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("fonts/inter-700.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  src: url("fonts/inter-900.woff2") format(woff2);
+  font-display: swap;
+}
+
+/* Variables */
+:root {
+  --black-extra-dark: #2D3440;
+  --pink-light: #FEAFC3;
+}
+
+/* Global */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--black-extra-dark, #2D3440);
+  background-color: var(--pink-light, #FEAFC3);
+}
+
+a {
+ color: var(--black-extra-dark, #2D3440);
+ text-decoration: none;
+}
+
+/* Pages */
+.navigation-link {
+ line-height: 20px;
+}
+
+.contact-phone {
+font-weight: 700;
+}
+
+.navigation-user .navigation-link {
+  font-size: 14px;
+}
