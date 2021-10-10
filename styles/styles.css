@@ -22,8 +22,12 @@
 
 /* Variables */
 :root {
-  --black-extra-dark: #2D3440;
-  --pink-light: #FEAFC3;
+  --black-extra-dark: #2d3440;
+  --pink-light: #feafc3;
+  --aggressive-salmon: #ff7799;
+  --extra-light: #fcfcfc;
+  --dim-gray: #565c66;
+  --silver: #b9b9b9;
 }
 
 /* Global */
@@ -31,24 +35,91 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: var(--black-extra-dark, #2D3440);
-  background-color: var(--pink-light, #FEAFC3);
+  color: var(--black-extra-dark, #2d3440);
+  background-color: var(--pink-light, #feafc3);
 }
 
 a {
- color: var(--black-extra-dark, #2D3440);
- text-decoration: none;
+  color: var(--black-extra-dark, #2d3440);
+  text-decoration: none;
+}
+
+.headline {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+  text-align: center;
 }
 
 /* Pages */
+/* Navigation */
 .navigation-link {
- line-height: 20px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .contact-phone {
-font-weight: 700;
+  font-weight: 700;
 }
 
 .navigation-user .navigation-link {
   font-size: 14px;
+}
+
+/* Gift */
+.gift-item {
+  background-color: var(--aggressive-salmon, #ff7799);
+}
+
+/* Offer */
+.product-card-item {
+  background-color: var(--extra-light, #fcfcfc);
+}
+
+.product-card-title,
+.product-card-price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.product-card-description {
+  color: var(--dim-gray, #565c66);
+}
+
+/* Advantages */
+.advantages {
+  background-color: var(--extra-light, #fcfcfc);
+}
+
+.advantages-description {
+  color: var(--dim-gray, #565c66);
+}
+
+/* Blog */
+.blog {
+  background-color: var(--extra-light, #fcfcfc);
+}
+
+.blog-news {
+  color: var(--dim-gray, #565c66);
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--extra-light, #fcfcfc);
+}
+
+.newsletter-description {
+  color: var(--dim-gray, #565c66);
+}
+
+.field {
+  line-height: 20px;
+  color: var(--silver, #b9b9b9);
+}
+
+/* Shipping */
+.shipping {
+  background-color: var(--extra-light, #fcfcfc);
 }
