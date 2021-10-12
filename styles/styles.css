@@ -22,12 +22,24 @@
 
 /* Variables */
 :root {
-  --black-extra-dark: #2d3440;
-  --pink-light: #feafc3;
-  --aggressive-salmon: #ff7799;
-  --extra-light: #fcfcfc;
-  --dim-gray: #565c66;
-  --silver: #b9b9b9;
+  --extra-dark-basic: #2d3440;
+  --dark-basic: #565c66;
+  --neutral-basic: #b9b9b9;
+  --light-basic: #e7e7e7;
+  --extra-light-basic: #fcfcfc;
+  --white-basic: #ffffff;
+  --extra-bright-special: #ff2f64;
+  --bright-special: #ff4a78;
+  --neutral-special: #ff7799;
+  --light-special: #feafc3;
+  --extra-light-special: #ffcbd8;
+  --blue-special: #69a9ff;
+  --light-blue-special: #9fc8ff;
+  --yellow-special: #fcc850;
+  --light-yellow-special: #fcdc92;
+  --error-status: #ea5454;
+  --success-status: #00e484;
+  --warning-status: #fd912e;
 }
 
 /* Global */
@@ -35,12 +47,12 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: var(--black-extra-dark, #2d3440);
-  background-color: var(--pink-light, #feafc3);
+  color: var(--extra-dark-basic, #2d3440);
+  background-color: var(--light-special, #feafc3);
 }
 
 a {
-  color: var(--black-extra-dark, #2d3440);
+  color: var(--extra-dark-basic, #2d3440);
   text-decoration: none;
 }
 
@@ -68,12 +80,12 @@ a {
 
 /* Gift */
 .gift-item {
-  background-color: var(--aggressive-salmon, #ff7799);
+  background-color: var(--neutral-special, #ff7799);
 }
 
 /* Offer */
 .product-card-item {
-  background-color: var(--extra-light, #fcfcfc);
+  background-color: var(--extra-light-basic, #fcfcfc);
 }
 
 .product-card-title,
@@ -84,34 +96,34 @@ a {
 }
 
 .product-card-description {
-  color: var(--dim-gray, #565c66);
+  color: var(--dark-basic, #565c66);
 }
 
 /* Advantages */
 .advantages {
-  background-color: var(--extra-light, #fcfcfc);
+  background-color: var(--extra-light-basic, #fcfcfc);
 }
 
 .advantages-description {
-  color: var(--dim-gray, #565c66);
+  color: var(--dark-basic, #565c66);
 }
 
 /* Blog */
 .blog {
-  background-color: var(--extra-light, #fcfcfc);
+  background-color: var(--extra-light-basic, #fcfcfc);
 }
 
 .blog-news {
-  color: var(--dim-gray, #565c66);
+  color: var(--dark-basic, #565c66);
 }
 
 /* Newsletter */
 .newsletter {
-  background-color: var(--extra-light, #fcfcfc);
+  background-color: var(--extra-light-basic, #fcfcfc);
 }
 
 .newsletter-description {
-  color: var(--dim-gray, #565c66);
+  color: var(--dark-basic, #565c66);
 }
 
 .field {
@@ -122,4 +134,50 @@ a {
 /* Shipping */
 .shipping {
   background-color: var(--extra-light, #fcfcfc);
+}
+
+/* Сontacts */
+.contacts {
+  background-color: var(--extra-light, #fcfcfc);
+}
+
+.contacts-headline,
+.contacts-phone-description {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--neutral-basic, #565c66);
+  text-align: left;
+}
+
+.contacts-adress-text,
+.contacts-phone {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contacts-time {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--neutral-basic, #565c66);
+}
+
+/* Footer */
+/* About */
+.about-item-link {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.about-item-link-supplier {
+  font-weight: 700;
+}
+
+/* Creator */
+.creator-descrition {
+  font-size: 12px;
+  line-height: 16px;
 }
