@@ -96,6 +96,16 @@ a {
   background-color: var(--neutral-special, #ff7799);
 }
 
+.gift-item:first-child {
+  background-image: url("../images/raspberries_cone.png");
+  background-repeat: no-repeat;
+}
+
+.gift-item:last-child {
+  background-image: url("../images/marshmallows_cone.png");
+  background-repeat: no-repeat;
+}
+
 /* Offer */
 .product-card-item {
   background-color: var(--extra-light-basic, #fcfcfc);
@@ -147,11 +157,15 @@ a {
 /* Shipping */
 .shipping {
   background-color: var(--extra-light, #fcfcfc);
+  background-image: url("../images/decoration_ice_cream.png");
+  background-repeat: no-repeat;
 }
 
 /* Сontacts */
 .contacts {
   background-color: var(--extra-light, #fcfcfc);
+  background-image: url("../images/ice_cream_cones.png");
+  background-repeat: no-repeat;
 }
 
 .contacts-headline,
