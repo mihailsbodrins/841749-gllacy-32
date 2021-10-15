@@ -157,14 +157,14 @@ a {
 /* Shipping */
 .shipping {
   background-color: var(--extra-light, #fcfcfc);
-  background-image: url("../images/decoration_ice_cream.png");
+  background-image: url("../images/decoration_ice_cream.jpg");
   background-repeat: no-repeat;
 }
 
 /* Сontacts */
 .contacts {
   background-color: var(--extra-light, #fcfcfc);
-  background-image: url("../images/ice_cream_cones.png");
+  background-image: url("../images/ice_cream_cones.jpg");
   background-repeat: no-repeat;
 }
 
