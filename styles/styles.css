@@ -86,22 +86,18 @@ a {
 }
 
 /* Pages */
-/* Navigation */
-.main-header {
-  display: flex;
+/* Page Container */
+.page-container {
+  width: 1170px;
   margin: 0 auto;
 
   outline: 5px solid green;
   outline-offset: -5px;
 }
 
+/* Navigation */
 .navigation {
   display: flex;
-  width: 1170px;
-  margin: 0 auto;
-
-  outline: 5px solid greenyellow;
-  outline-offset: -5px;
 }
 
 .logo {
@@ -138,14 +134,6 @@ a {
 
 .main-index {
   outline: 5px solid blue;
-  outline-offset: -5px;
-}
-
-.page-container {
-  width: 1170px;
-  margin: 0 auto;
-
-  outline: 5px solid green;
   outline-offset: -5px;
 }
 
@@ -338,15 +326,6 @@ a {
 }
 
 /* Footer */
-.page-footer-container {
-  display: flex;
-  width: 1170px;
-  margin: 0 auto;
-
-  outline: 5px solid green;
-  outline-offset: -5px;
-}
-
 .social {
   width: 200px;
   margin-right: 300px;
@@ -376,6 +355,7 @@ a {
 /* Creator */
 .wrapper-creator {
   margin-left: auto;
+
   outline: 5px solid gray;
   outline-offset: -5px;
 }
@@ -390,6 +370,12 @@ a {
 }
 
 /* Catalog Page */
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
 .breadcrums-items {
   font-size: 14px;
   line-height: 20px;
@@ -405,14 +391,30 @@ a {
   text-align: left;
 }
 
+/* Catalog Products */
 .catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 807px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+
+  outline: 5px solid gray;
+  outline-offset: -5px;
+}
+
+.catalog-filter-group:last-child {
+  width: 596px;
 }
 
 .catalog-filter-button {
   font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .pagination-link {
