@@ -2,21 +2,21 @@
 @font-face {
   font-family: "Inter";
   font-weight: 400;
-  src: url("fonts/inter-400.woff2") format(woff2);
+  src: url("../fonts/inter-400.woff2") format(woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   font-weight: 700;
-  src: url("fonts/inter-700.woff2") format(woff2);
+  src: url("../fonts/inter-700.woff2") format(woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   font-weight: 900;
-  src: url("fonts/inter-900.woff2") format(woff2);
+  src: url("../fonts/inter-900.woff2") format(woff2);
   font-display: swap;
 }
 
@@ -50,8 +50,10 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  min-width: 1440px;
   min-height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -107,11 +109,16 @@ a {
 /* Navigation */
 .navigation {
   display: flex;
+  line-height: 20px;
 }
 
 .logo {
   padding: 24px 16px 24px 0;
   align-self: center;
+}
+
+.logo img {
+  display: block;
 }
 
 .navigation-list {
@@ -128,17 +135,18 @@ a {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
-  padding: 40px 16px;
+  padding: 30px 16px;
   line-height: 20px;
 }
 
 .contact-phone {
-  display: block;
   margin-left: auto;
-  font-weight: 700;
+  margin-right: 8px;
+  padding: 35px 10px;
   align-self: center;
-  padding: 12px 10px;
+  font-weight: 700;
 }
 
 .contact-phone b {
@@ -150,19 +158,48 @@ a {
 }
 
 .navigation-user .navigation-link {
-  display: block;
-  min-width: 10px;
-  min-height: 10px;
-  padding: 40px 8px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 8px;
   font-size: 14px;
+  fill: ;
+  border-radius: 100%;
+  background: rgba(252, 252, 252, 0.3);
+}
 
-  outline: 5px solid yellow;
-  outline-offset: -5px;
+.navigation-user .navigation-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: var(--extra-dark-basic, #2d3440);
+}
+
+.navigation-user .navigation-login,
+.navigation-user .navigation-cart {
+  position: relative;
+  padding: 4px 16px 4px 40px;
+  border-radius: 26px;
+}
+
+.navigation-link .navigation-icon {
+  left: -7px;
+}
+
+.navigation-login .navigation-icon,
+.navigation-cart .navigation-icon {
+  right: auto;
+  left: 20px;
 }
 
 .main-index {
   flex-grow: 1;
-  padding-top: 80px;
 }
 
 /* Gift */
@@ -186,38 +223,35 @@ a {
 }
 
 .gift-item {
-  width: 570px;
+  width: 310px;
+  padding: 40px 220px 40px 40px;
   border-radius: 16px;
   background-color: var(--neutral-special, #ff7799);
 }
 
-.gift-item-container {
-  padding: 40px 0 40px 40px;
-}
-
 .gift-title {
-  margin: 0;
+  margin: 0 0 16px 0;
   font-size: 24px;
   line-height: 30px;
 }
 
 .gift-description {
-  width: 310px;
-  margin-top: 16px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
 }
 
-.gift-description:last-of-type {
-  width: 290px;
+.gift-button {
+  margin: 0;
 }
 
 .gift-item:first-child {
   background-image: url("../images/raspberries_cone.png");
+  background-position: 378px 30px;
   background-repeat: no-repeat;
 }
 
 .gift-item:last-child {
   background-image: url("../images/marshmallows_cone.png");
+  background-position: 330px 30px;
   background-repeat: no-repeat;
 }
 
@@ -228,12 +262,11 @@ a {
 
 .offer-headline {
   width: 527px;
-  margin: 0 auto 56px;
+  margin: 0 auto 105px;
 }
 
 .offer-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
@@ -241,15 +274,31 @@ a {
 }
 
 .product-card-item {
+  position: relative;
   width: 190px;
-  margin: 0 30px 40px 0;
-  padding: 0 40px;
+  padding: 130px 40px 0 40px;
   text-align: center;
+  border-radius: 8px;
   background-color: var(--extra-light-basic, #fcfcfc);
 }
 
+.product-card-item .wrapper {
+  position: absolute;
+  top: -50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  margin: 0;
+}
+
 .product-card-item img {
-  margin-bottom: 10px;
+  object-fit: cover;
+  width: 110%;
+  height: 110%;
 }
 
 .product-card-title {
@@ -280,6 +329,7 @@ a {
 }
 
 .product-card-button {
+  position: relative;
   display: block;
   width: 32px;
   height: 32px;
@@ -289,16 +339,24 @@ a {
   background-color: var(--extra-bright-special, #ff2f64);
 }
 
+.product-card-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  fill: var(--extra-light-basic, #fcfcfc);
+}
+
 /* Advantages */
 .advantages {
   margin-bottom: 80px;
-  padding: 12px;
+  padding: 24px;
   border-radius: 16px;
   background-image: url("../images/waffles_background.jpg");
 }
 
 .advantages-container {
-  margin: 12px;
+  margin: 0;
+  padding: 0;
   border-radius: 16px;
   background-color: var(--extra-light-basic, #fcfcfc);
 }
@@ -309,21 +367,23 @@ a {
 }
 
 .advantages-list {
-  columns: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin: 0;
-  padding: 0 40px;
+  padding: 0 0 16px 10px;
   list-style-type: none;
 }
 
 .advatages-items {
-  min-width: 442px;
-
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
+  width: 450px;
+  margin: 0;
+  padding: 0 0 40px 95px;
 }
 
 .advantages-description {
-  margin: 0 0 40px 64px;
+  margin: 0;
+  padding: 0;
   color: var(--dark-basic, #565c66);
 }
 
