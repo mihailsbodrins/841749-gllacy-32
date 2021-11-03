@@ -94,7 +94,9 @@ a {
   text-align: center;
   color: var(--extra-dark-basic, #2d3440);
   background-color: var(--extra-light-basic, #fcfcfc);
-  border: 4px solid var(--button-special, rgba(255, 47, 100, 0.3));
+  /* border: 4px  var(--button-special, rgba(255, 47, 100, 0.3)); */
+  outline: 4px solid rgba(252, 252, 252, 0.4); /* цвет не указан */
+  /* Outline не поддерживает кнопка  */
   border-radius: 26px;
   text-decoration: none;
 }
@@ -158,11 +160,11 @@ a {
 }
 
 .navigation-user .navigation-link {
-  min-width: 18px;
-  min-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
-  fill: ;
   border-radius: 100%;
   background: rgba(252, 252, 252, 0.3);
 }
@@ -172,30 +174,19 @@ a {
 }
 
 .navigation-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
   fill: var(--extra-dark-basic, #2d3440);
-}
-
-.navigation-user .navigation-login,
-.navigation-user .navigation-cart {
-  position: relative;
-  padding: 4px 16px 4px 40px;
-  border-radius: 26px;
-}
-
-.navigation-link .navigation-icon {
-  left: -7px;
 }
 
 .navigation-login .navigation-icon,
 .navigation-cart .navigation-icon {
-  right: auto;
-  left: 20px;
+  padding-right: 8px;
+}
+
+.navigation-user .navigation-login,
+.navigation-user .navigation-cart {
+  margin: 0;
+  padding: 6px 18px;
+  border-radius: 26px;
 }
 
 .main-index {
@@ -257,7 +248,7 @@ a {
 
 /* Offer */
 .offer {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .offer-headline {
@@ -387,6 +378,14 @@ a {
   color: var(--dark-basic, #565c66);
 }
 
+/* .advantages-description-ice-cream::before {
+  content: "";
+  width: auto;
+  background-image: url(../images/ice_cream.svg);
+  background-repeat: no-repeat;
+} */
+/* Не сделано */
+
 /* Wrapper */
 .wrapper {
   display: flex;
@@ -399,41 +398,35 @@ a {
 .blog,
 .newsletter {
   width: 570px;
-  height: 220px;
   border-radius: 16px;
   background-color: var(--extra-light-basic, #fcfcfc);
 }
 
-.blog-wrapper {
-  position: absolute;
-  margin: 32px;
-  width: 330px;
+.blog {
+  background-image: url("../images/serving_ice_cream.jpg");
+  background-repeat: no-repeat;
 }
 
 .blog-news {
-  margin: 0 0 12px 0;
+  margin: 0;
+  padding: 32px 32px 12px 32px;
   line-height: 20px;
   color: var(--dark-basic, #565c66);
 }
 
 .blog-title {
   margin: 0;
+  padding: 0 235px 63px 32px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-}
-
-.blog img {
-  display: block;
-  height: 100%;
-  background: transparent;
-  background-repeat: no-repeat;
 }
 
 /* Newsletter */
 .newsletter {
   width: 570px;
   background-image: url("../images/post_background.jpg");
+  background-repeat: no-repeat;
 }
 
 .newsletter-container {
@@ -445,7 +438,7 @@ a {
 
 .newsletter-description {
   margin: 0;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
   color: var(--dark-basic, #565c66);
 }
 
@@ -456,7 +449,7 @@ a {
 
 .field {
   width: 314px;
-  height: 48px;
+  height: 46px;
   margin: 0;
   padding: 0 0 0 16px;
   font-size: 16px;
@@ -469,14 +462,14 @@ a {
 .newsletter-button {
   color: var(--extra-light-basic, #fcfcfc);
   background-color: var(--extra-bright-special, #ff2f64);
-  border: 4px solid var(--button-special, rgba(255, 47, 100, 0.3));
+  border: 0;
 }
 
 /* Shipping */
 .shipping {
   display: flex;
   height: 534px;
-  margin-bottom: 80px;
+  margin-bottom: 79px;
   justify-content: space-between;
   align-items: center;
   background-image: url("../images/decoration_ice_cream.jpg");
@@ -486,12 +479,18 @@ a {
 
 .shipping-wrapper:first-child {
   width: 371px;
-  padding: 100px;
+  padding: 107px 100px 100px 100px;
 }
 
 .shipping-headline {
   text-align: left;
-  margin: 24px 0;
+  margin: 0;
+  padding: 0 0 23px;
+}
+
+.shipping-description {
+  margin: 0;
+  color: var(--dark-basic, #565c66);
 }
 
 .shipping-wrapper:last-child {
@@ -503,21 +502,68 @@ a {
   border-radius: 8px;
 }
 
+.shipping-description-form {
+  margin: 0;
+  padding-bottom: 32px;
+  color: var(--dark-basic, #565c66);
+}
+
+.shipping-form {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 20px 16px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.field-group input {
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid var(--neutral-basic, #b9b9b9);
+  border-radius: 4px;
+  color: var(--neutral-basic, #b9b9b9);
+}
+
+.shipping-form label {
+  padding-bottom: 8px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.shipping-form-address {
+  grid-column: 1 / -1;
+  padding-bottom: 9px;
+}
+
+.shipping-submit {
+  grid-column: 1 / -1;
+  justify-self: center;
+  color: var(--extra-light-basic, #fcfcfc);
+  background-color: var(--extra-bright-special, #ff2f64);
+  border: none;
+  outline: 4px solid rgba(255, 47, 100, 0.3);
+}
+
 /* Сontacts */
 .contacts {
-  display: flex;
-  height: 492px;
+  padding: 64px;
   background-image: url("../images/ice_cream_cones.jpg");
   background-repeat: no-repeat;
   border-radius: 16px;
 }
 
-.contacts-wrapper {
+.contacts-adress {
   width: 263px;
-  height: 284px;
-  margin-left: 64px;
   padding: 40px;
   align-self: center;
+  font-style: normal;
   background-color: var(--extra-light, #fcfcfc);
   border-radius: 8px;
 }
@@ -525,6 +571,7 @@ a {
 .contacts-headline,
 .contacts-phone-description {
   margin: 0;
+  padding-bottom: 12px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -532,22 +579,31 @@ a {
   text-align: left;
 }
 
-.contacts-adress {
-  font-style: normal;
-}
-
 .contacts-adress-text,
 .contacts-phone {
+  margin: 0;
+  padding-bottom: 24px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
 .contacts-time {
+  margin: 0;
+  padding-bottom: 32px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: var(--neutral-basic, #565c66);
+}
+
+.button-feedback {
+  display: inline-block;
+  padding: 13px 32px;
+  color: var(--extra-light-basic, #fcfcfc);
+  background-color: var(--extra-bright-special, #ff2f64);
+  border: none;
+  outline: 4px solid rgba(255, 47, 100, 0.3);
 }
 
 /* Footer */
@@ -555,15 +611,10 @@ a {
   display: flex;
   margin: 0 auto;
   padding: 46px 0;
-  outline: 5px solid gray;
-  outline-offset: -5px;
 }
 
 .social {
   max-width: 300px;
-
-  outline: 5px solid gray;
-  outline-offset: -5px;
 }
 
 .social-list {
@@ -582,23 +633,22 @@ a {
 .about {
   width: 370px;
   margin-left: auto;
-  margin-right: 200px;
-  outline: 5px solid gray;
-  outline-offset: -5px;
+  margin-right: 185px;
 }
 
 .about-list {
-  /* display: flex;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start; */
-  columns: 2;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .about-item {
+  min-width: 126px;
   margin: 0;
+  padding: 0 0 8px 24px;
 }
 
 .about-item-link {
@@ -617,9 +667,6 @@ a {
   width: 193px;
   margin-right: 0;
   padding-right: 14px;
-
-  outline: 5px solid gray;
-  outline-offset: -5px;
 }
 
 .creator-descrition {
