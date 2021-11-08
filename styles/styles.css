@@ -94,7 +94,7 @@ a {
   text-align: center;
   color: var(--extra-dark-basic, #2d3440);
   background-color: var(--extra-light-basic, #fcfcfc);
-  /* border: 4px  var(--button-special, rgba(255, 47, 100, 0.3)); */
+  border: none;
   outline: 4px solid rgba(252, 252, 252, 0.4); /* цвет не указан */
   /* Outline не поддерживает кнопка  */
   border-radius: 26px;
@@ -232,6 +232,7 @@ a {
 
 .gift-button {
   margin: 0;
+  /* border: none; */
 }
 
 .gift-item:first-child {
@@ -253,11 +254,12 @@ a {
 
 .offer-headline {
   width: 527px;
-  margin: 0 auto 105px;
+  margin: 0 auto 60px;
 }
 
 .offer-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
@@ -267,13 +269,15 @@ a {
 .product-card-item {
   position: relative;
   width: 190px;
+  margin: 50px 0 90px;
   padding: 130px 40px 0 40px;
   text-align: center;
   border-radius: 8px;
   background-color: var(--extra-light-basic, #fcfcfc);
 }
 
-.product-card-item .wrapper {
+.product-card-item .wrapper,
+.product-card-item .wrapper-product-images {
   position: absolute;
   top: -50px;
   right: 50px;
@@ -387,7 +391,8 @@ a {
 /* Не сделано */
 
 /* Wrapper */
-.wrapper {
+.wrapper,
+.wrapper-product-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
