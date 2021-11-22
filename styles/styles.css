@@ -301,22 +301,15 @@ a {
   list-style: none;
 }
 
-.curent-slider-image .large-img {
-  display: flex;
-  width: 312px;
-  height: 507px;
-  align-items: center;
-  background-image: url(../images/plombir-starwberryjam-icecream.png);
-  background-repeat: no-repeat;
-}
-
-.large-img .circle {
+/* .large-img .circle {
   display: block;
-  width: 312px;
+  position: absolute;
+  width: 321px;
   height: 321px;
-  background-color: var(--extra-light-basic-opacity40, rgba(252, 252, 252, 0.4));
+  background-color: var(--extra-light-special, #ffcbd8);
   border-radius: 50%;
-}
+  z-index: -1;
+} */
 
 .curent-slider-image .small-img-1 {
   width: 100px;
