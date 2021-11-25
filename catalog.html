@@ -20,10 +20,10 @@
               <div class="popover popover-hovering-catalog">
                 <h3 class="hovering-title">Новинки</h3>
                 <ul class="hovering-list">
-                  <li class="hovering-item">Сливочное</li>
-                  <li class="hovering-item">Щербеты</li>
-                  <li class="hovering-item">Фруктовый лед</li>
-                  <li class="hovering-item">Мелорин</li>
+                  <li class="hovering-item"><a href="#">Сливочное</a></li>
+                  <li class="hovering-item"><a href="#">Щербеты</a></li>
+                  <li class="hovering-item"><a href="#">Фруктовый лед</a></li>
+                  <li class="hovering-item"><a href="#">Мелорин</a></li>
                 </ul>
               </div>
             </li>
@@ -72,7 +72,7 @@
                       <p class="cart-item-description">1 кг х 310 ₽</p>
                     </div>
                       <b class="cart-item-price">310 ₽</b>
-                      <button type="button" class="cart-item-button button">
+                      <button type="button" class="button cart-item-button">
                         <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z" fill="#2D3440"/>
                         </svg>
@@ -134,7 +134,7 @@
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Сортировка:</legend>
-              <label class="visually-hidden" for="sorting"></label>
+              <label class="visually-hidden" for="sorting">Ценовой сегмент</label>
               <select class="select-control" id="sorting" name="sorting">
                 <option value="popular">по популярности</option>
                 <option value="cheap">по дешевли</option>
@@ -145,9 +145,11 @@
               <legend class="catalog-filter-title">Цена:
                 <label class="catalog-filter-label">
                   <input class="catalog-filter-input" type="text" name="min-price" value="100"> ₽ -
+                  <span class="visually-hidden">Низкая цена</span>
                 </label>
                 <label class="catalog-filter-label">
                   <input class="catalog-filter-input" type="text" name="max-price" value="500"> ₽
+                  <span class="visually-hidden">Высокая цена</span>
                 </label>
               </legend>
               <div class="range-controls">
